@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\TGStreamDemo_MindWaveMobile-master\TGStreamDemo_MindWaveMobile-master\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\TGStreamDemo_MindWaveMobile-master\TGStreamDemo_MindWaveMobile-master\build-types\debug\shaders"/></dataSet></merger>

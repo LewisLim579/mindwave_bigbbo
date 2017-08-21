@@ -1,0 +1,4 @@
+#Tue Aug 22 01:59:51 KST 2017
+base.0=D\:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\libStreamSDK_v1.2.0_3e1fa99ebe07e650f05af7d2f31e3b39804c48cd
+renamed.0=classes.dex
+file.0=D\:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\libStreamSDK_v1.2.0_3e1fa99ebe07e650f05af7d2f31e3b39804c48cd\\classes.dex

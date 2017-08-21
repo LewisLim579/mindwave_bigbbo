@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\TGStreamDemo_MindWaveMobile-master\TGStreamDemo_MindWaveMobile-master\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fcda2182f4a8ff29470224fb4aee0c6875c1fd1">
+        <dex dex="D:\TGStreamDemo_MindWaveMobile-master\TGStreamDemo_MindWaveMobile-master\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_56b89b39c96625f9f092635901500d04215f89a0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\TGStreamDemo_MindWaveMobile-master\TGStreamDemo_MindWaveMobile-master\libs\libStreamSDK_v1.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="033b7351fc2173a9ac8e82a355c877495759eb67">
+        <dex dex="D:\TGStreamDemo_MindWaveMobile-master\TGStreamDemo_MindWaveMobile-master\build\intermediates\transforms\dex\debug\folders\1000\2\libStreamSDK_v1.2.0_3e1fa99ebe07e650f05af7d2f31e3b39804c48cd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\TGStreamDemo_MindWaveMobile-master\TGStreamDemo_MindWaveMobile-master\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="D:\TGStreamDemo_MindWaveMobile-master\TGStreamDemo_MindWaveMobile-master\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_be5960117446e1151ea3660bb954da42d8af7bbc\classes.dex" />
+    </item>
+
+</items>

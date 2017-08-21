@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_select_device.xml",
+        "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\layout\\dialog_select_device.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_select_device.xml",
+        "source": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\res\\layout\\dialog_select_device.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\build\\intermediates\\res\\merged\\debug\\layout\\first_view.xml",
+        "source": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\res\\layout\\first_view.xml"
+    },
+    {
+        "merged": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\res\\merged\\debug\\layout\\bluetoothdevice_view.xml",
+        "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\layout\\bluetoothdevice_view.xml"
+    },
+    {
+        "merged": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\res\\merged\\debug\\layout\\first_view.xml",
+        "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\layout\\first_view.xml"
+    },
+    {
+        "merged": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_device.xml",
+        "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\layout\\listitem_device.xml"
+    },
+    {
+        "merged": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\res\\merged\\debug\\layout\\main_view.xml",
+        "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\layout\\main_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\build\\intermediates\\res\\merged\\debug\\layout\\bluetoothdevice_view.xml",
+        "source": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\res\\layout\\bluetoothdevice_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\build\\intermediates\\res\\merged\\debug\\layout\\main_view.xml",
+        "source": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\res\\layout\\main_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_device.xml",
+        "source": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\res\\layout\\listitem_device.xml"
+    }
+]
