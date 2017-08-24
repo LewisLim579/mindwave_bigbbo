@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.neurosky.mindwavemobiledemo.DemoActivity"
+            android:name="com.neurosky.mindwavemobiledemo.BluetoothDeviceDemoActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
@@ -28,7 +28,7 @@
         </activity>
         <activity android:name="com.neurosky.mindwavemobiledemo.BluetoothAdapterDemoActivity"
             android:screenOrientation="landscape"/>
-         <activity android:name="com.neurosky.mindwavemobiledemo.BluetoothDeviceDemoActivity"
+         <activity android:name="com.neurosky.mindwavemobiledemo.DemoActivity"
              android:screenOrientation="landscape"/>
           <activity android:name="com.neurosky.mindwavemobiledemo.FileDemoActivity"
               android:screenOrientation="landscape"/>

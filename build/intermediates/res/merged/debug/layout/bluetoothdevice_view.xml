@@ -5,22 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ff000000"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-       <TableLayout
+    <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="17dp"
-        android:stretchColumns="*" >
+        android:stretchColumns="*">
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            
+            android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/tv_ps_lable"
                 android:layout_width="wrap_content"
@@ -60,7 +62,6 @@
                 android:textSize="20dp" />
 
 
-
             <TextView
                 android:id="@+id/tv_meditation_label"
                 android:layout_width="wrap_content"
@@ -79,22 +80,24 @@
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
 
+
             <Button
-                android:id="@+id/btn_start"
+                android:id="@+id/btn_selectdevice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|center_horizontal|center"
-                android:text="Start"
-                 android:textColor="#ffffffff"
+                android:text="연결"
+                android:textColor="#ffffffff"
                 android:textSize="16dp" />
+
+
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            
-             <TextView
+            android:layout_height="wrap_content">
+
+            <TextView
                 android:id="@+id/tv_delta_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -148,21 +151,23 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
-        			
+
 
             <Button
-                android:id="@+id/btn_stop"
+                android:id="@+id/btn_start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stop"
-                 android:textColor="#ffffffff"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:text="기록시작"
+                android:textColor="#ffffffff"
                 android:textSize="16dp" />
+
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/tv_highalpha_label"
@@ -180,6 +185,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
+
             <TextView
                 android:id="@+id/tv_lowbeta_label"
                 android:layout_width="wrap_content"
@@ -214,18 +220,23 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
-               <Button
-                android:id="@+id/btn_selectdevice"
+
+
+            <Button
+                android:id="@+id/btn_stop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Device"
-                 android:textColor="#ffffffff"
+                android:text="기록종료"
+                android:textColor="#ffffffff"
                 android:textSize="16dp" />
+
+
         </TableRow>
-         <TableRow
+
+        <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/tv_lowgamma_label"
@@ -243,6 +254,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
+
             <TextView
                 android:id="@+id/tv_middlegamma_label"
                 android:layout_width="wrap_content"
@@ -259,12 +271,12 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
-            
+
             <TextView
                 android:id="@+id/tv_badpacket_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="BadPack"
+                android:text="Bad"
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
 
@@ -277,10 +289,10 @@
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
 
-            
+
         </TableRow>
     </TableLayout>
-    
+
     <!-- drawing with view.  -->
     <LinearLayout
         android:id="@+id/wave_layout"
@@ -291,10 +303,10 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tableLayout1"
         android:background="@xml/sharp"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
     </LinearLayout>
-    
+
     <!--  drawing with achart
    	<LinearLayout
     	android:id="@+id/wave_layout"

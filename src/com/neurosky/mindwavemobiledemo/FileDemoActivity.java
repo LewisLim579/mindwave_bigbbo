@@ -132,6 +132,7 @@ public class FileDemoActivity extends  Activity{
 			tgStreamReader.stop();
 			tgStreamReader.close();
 		}
+
 	}
 
 	@Override

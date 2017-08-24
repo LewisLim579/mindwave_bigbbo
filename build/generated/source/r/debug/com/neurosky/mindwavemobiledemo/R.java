@@ -63,9 +63,9 @@ public final class R {
         public static final int btn_adapter=0x7f09002b;
         public static final int btn_device=0x7f09002d;
         public static final int btn_filedemo=0x7f090029;
-        public static final int btn_selectdevice=0x7f09001a;
-        public static final int btn_start=0x7f09000a;
-        public static final int btn_stop=0x7f090012;
+        public static final int btn_selectdevice=0x7f09000a;
+        public static final int btn_start=0x7f090012;
+        public static final int btn_stop=0x7f09001a;
         public static final int device_name=0x7f090026;
         public static final int img1=0x7f090024;
         public static final int img2=0x7f090025;
@@ -121,15 +121,8 @@ public final class R {
     public static final class style {
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
          */
         public static final int AppBaseTheme=0x7f070000;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f070001;
         public static final int dialog1=0x7f070002;
     }

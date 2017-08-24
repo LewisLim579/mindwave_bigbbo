@@ -1,4 +1,4 @@
-#Tue Aug 22 01:59:51 KST 2017
+#Fri Aug 25 01:30:08 KST 2017
 base.0=D\:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1
 renamed.0=classes.dex
 file.0=D\:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1\\classes.dex
