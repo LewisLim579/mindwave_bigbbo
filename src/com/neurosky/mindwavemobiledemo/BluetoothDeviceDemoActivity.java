@@ -65,6 +65,8 @@ public class BluetoothDeviceDemoActivity extends Activity {
 	private String address = null;
 
     private String brainData = "";
+	private String medi = "0";
+	private String atten = "0";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -155,7 +157,14 @@ public class BluetoothDeviceDemoActivity extends Activity {
 				// TODO Auto-generated method stub
 				if (tgStreamReader != null) {
 					tgStreamReader.stop();
+					Log.e("lewis",brainData);
+					showTitleDialog();
+
+
+
 				}
+
+
 			}
 
 		});
@@ -325,6 +334,8 @@ public class BluetoothDeviceDemoActivity extends Activity {
 			data.setTime(getNow());
 
 			switch (msg.what) {
+
+
 				case 1234:
 					tgStreamReader.MWM15_getFilterType();
 					isReadFilter = true;
@@ -370,12 +381,14 @@ public class BluetoothDeviceDemoActivity extends Activity {
 				case MindDataType.CODE_MEDITATION:
 					Log.d(TAG, "HeadDataType.CODE_MEDITATION " + msg.arg1);
 					tv_meditation.setText("" + msg.arg1);
-					data.setMeditation("" +msg.arg1);
+
+					medi = msg.arg1+"";
 					break;
 				case MindDataType.CODE_ATTENTION:
 					Log.d(TAG, "CODE_ATTENTION " + msg.arg1);
 					tv_attention.setText("" + msg.arg1);
-					data.setAttention("" +msg.arg1);
+
+					atten = msg.arg1+"";
 					break;
 				case MindDataType.CODE_EEGPOWER:
 					EEGPower power = (EEGPower) msg.obj;
@@ -397,6 +410,12 @@ public class BluetoothDeviceDemoActivity extends Activity {
 						data.setHighBeta("" + power.highBeta);
 						data.setLowGamma("" + power.lowGamma);
 						data.setMiddleGamma("" + power.middleGamma);
+
+						data.setMeditation("" +medi);
+						data.setAttention("" +atten);
+						medi="0";
+						atten="0";
+						brainData += data.getBrainTextString();
 					}
 					break;
 				case MindDataType.CODE_POOR_SIGNAL://
@@ -413,7 +432,6 @@ public class BluetoothDeviceDemoActivity extends Activity {
 					break;
 			}
 
-			brainData = data.toString();
 			super.handleMessage(msg);
 		}
 	};
@@ -601,12 +619,14 @@ public class BluetoothDeviceDemoActivity extends Activity {
         }
 
 		// txt 파일 생성
-		_brainData = "시간  Medita Attent delta theta lowAl highAl lowBe highBe lowGam midGam\n";
+		String textToFile = "시간		Medita Attent delta theta lowAl highAl lowBe highBe lowGam midGam\n";
+		textToFile += _brainData;
 		File savefile = new File(dirPath + "LOG_" + _fileName + ".txt");
 		try {
             FileOutputStream fos = new FileOutputStream(savefile);
-            fos.write(_brainData.getBytes());
+            fos.write(textToFile.getBytes());
             fos.close();
+			showToast("파일생성완료.",Toast.LENGTH_SHORT);
             brainData = "";
 		} catch (IOException e)
 		{
@@ -648,7 +668,7 @@ public class BluetoothDeviceDemoActivity extends Activity {
     private String getNow(){
 		long time = System.currentTimeMillis();
 
-		SimpleDateFormat dayTime = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+		SimpleDateFormat dayTime = new SimpleDateFormat("MM/dd hh:mm:ss");
 		String str = dayTime.format(new Date(time));
 		return str;
 	}

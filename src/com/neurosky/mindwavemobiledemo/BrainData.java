@@ -106,8 +106,10 @@ public class BrainData {
         this.middleGamma = middleGamma;
     }
 
+    public String getBrainTextString(){
 
-
+        return time+" "+meditation+" "+attention+" "+delta+" "+theta+" "+lowAlpha+" "+highAlpha+" "+lowBeta+" "+highBeta+" "+lowGamma+" "+middleGamma+"\n";
+    }
 
 
 

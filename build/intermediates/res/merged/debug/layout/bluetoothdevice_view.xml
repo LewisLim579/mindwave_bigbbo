@@ -42,6 +42,26 @@
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
 
+
+            <TextView
+                android:id="@+id/tv_meditation_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medi."
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_meditation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffffff"
+                android:textSize="20dp" />
+
+            
             <TextView
                 android:id="@+id/tv_attention_label"
                 android:layout_width="wrap_content"
@@ -62,32 +82,7 @@
                 android:textSize="20dp" />
 
 
-            <TextView
-                android:id="@+id/tv_meditation_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Medi."
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#ffffffff"
-                android:textSize="20dp" />
 
-            <TextView
-                android:id="@+id/tv_meditation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="00"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#ffffffff"
-                android:textSize="20dp" />
-
-
-            <Button
-                android:id="@+id/btn_selectdevice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="연결"
-                android:textColor="#ffffffff"
-                android:textSize="16dp" />
 
 
         </TableRow>
@@ -153,15 +148,6 @@
                 android:textSize="20dp" />
 
 
-            <Button
-                android:id="@+id/btn_start"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical|center_horizontal|center"
-                android:text="기록시작"
-                android:textColor="#ffffffff"
-                android:textSize="16dp" />
-
         </TableRow>
 
         <TableRow
@@ -220,15 +206,6 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffffff"
                 android:textSize="20dp" />
-
-
-            <Button
-                android:id="@+id/btn_stop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="기록종료"
-                android:textColor="#ffffffff"
-                android:textSize="16dp" />
 
 
         </TableRow>
@@ -295,13 +272,52 @@
 
     <!-- drawing with view.  -->
     <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tableLayout1">
+        <Button
+            android:id="@+id/btn_selectdevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="연결"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:text="기록시작"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="기록종료"
+            android:textColor="#ffffffff"
+            android:textSize="16dp" />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/wave_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/tableLayout1"
+        android:layout_below="@+id/btns"
         android:background="@xml/sharp"
         android:orientation="vertical">
 
