@@ -12,8 +12,20 @@
         "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\drawable-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\bigbbo\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\gouxuan2.png",
+        "source": "C:\\bigbbo\\res\\drawable-xxhdpi\\gouxuan2.png"
+    },
+    {
         "merged": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\gouxuan1.png",
         "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\drawable-xxhdpi\\gouxuan1.png"
+    },
+    {
+        "merged": "C:\\bigbbo\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
+        "source": "C:\\bigbbo\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\bigbbo\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\select_device_bg.png",
+        "source": "C:\\bigbbo\\res\\drawable-xxhdpi\\select_device_bg.png"
     },
     {
         "merged": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\gouxuan2.png",
@@ -30,5 +42,9 @@
     {
         "merged": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\bigbbo\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\gouxuan1.png",
+        "source": "C:\\bigbbo\\res\\drawable-xxhdpi\\gouxuan1.png"
     }
 ]

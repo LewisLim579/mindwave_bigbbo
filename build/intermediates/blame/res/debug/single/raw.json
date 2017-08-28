@@ -6,5 +6,9 @@
     {
         "merged": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\res\\merged\\debug\\raw\\tgam_capture.bin",
         "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\raw\\tgam_capture.bin"
+    },
+    {
+        "merged": "C:\\bigbbo\\build\\intermediates\\res\\merged\\debug\\raw\\tgam_capture.bin",
+        "source": "C:\\bigbbo\\res\\raw\\tgam_capture.bin"
     }
 ]

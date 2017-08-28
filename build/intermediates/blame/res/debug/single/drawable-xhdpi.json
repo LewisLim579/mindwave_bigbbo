@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\bigbbo\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "C:\\bigbbo\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
         "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\drawable-xhdpi\\ic_launcher.png"
     },

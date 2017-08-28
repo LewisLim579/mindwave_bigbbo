@@ -4,6 +4,10 @@
         "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\bigbbo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\bigbbo\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
         "source": "C:\\Users\\RAY\\Desktop\\Android\\TGStreamDemo_MindWaveMobile\\res\\drawable-hdpi\\ic_launcher.png"
     }

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\bigbbo\\build\\intermediates\\res\\merged\\debug\\xml\\sharp.xml",
+        "source": "C:\\bigbbo\\res\\xml\\sharp.xml"
+    },
+    {
         "merged": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\build\\intermediates\\res\\merged\\debug\\xml\\sharp.xml",
         "source": "D:\\TGStreamDemo_MindWaveMobile-master\\TGStreamDemo_MindWaveMobile-master\\res\\xml\\sharp.xml"
     },
