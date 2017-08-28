@@ -1,6 +1,7 @@
 package com.neurosky.mindwavemobiledemo;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -24,6 +25,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -36,11 +38,12 @@ import com.neurosky.connection.EEGPower;
 import com.neurosky.connection.TgStreamHandler;
 import com.neurosky.connection.TgStreamReader;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -60,6 +63,10 @@ public class BluetoothDeviceDemoActivity extends Activity {
 	private BluetoothAdapter mBluetoothAdapter;
 	private BluetoothDevice mBluetoothDevice;
 	private String address = null;
+
+    private String brainData = "";
+	private String medi = "0";
+	private String atten = "0";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -150,7 +157,14 @@ public class BluetoothDeviceDemoActivity extends Activity {
 				// TODO Auto-generated method stub
 				if (tgStreamReader != null) {
 					tgStreamReader.stop();
+					Log.e("lewis",brainData);
+					showTitleDialog();
+
+
+
 				}
+
+
 			}
 
 		});
@@ -316,7 +330,12 @@ public class BluetoothDeviceDemoActivity extends Activity {
 		@Override
 		public void handleMessage(Message msg) {
 
+			BrainData data = new BrainData();
+			data.setTime(getNow());
+
 			switch (msg.what) {
+
+
 				case 1234:
 					tgStreamReader.MWM15_getFilterType();
 					isReadFilter = true;
@@ -362,10 +381,14 @@ public class BluetoothDeviceDemoActivity extends Activity {
 				case MindDataType.CODE_MEDITATION:
 					Log.d(TAG, "HeadDataType.CODE_MEDITATION " + msg.arg1);
 					tv_meditation.setText("" + msg.arg1);
+
+					medi = msg.arg1+"";
 					break;
 				case MindDataType.CODE_ATTENTION:
 					Log.d(TAG, "CODE_ATTENTION " + msg.arg1);
 					tv_attention.setText("" + msg.arg1);
+
+					atten = msg.arg1+"";
 					break;
 				case MindDataType.CODE_EEGPOWER:
 					EEGPower power = (EEGPower) msg.obj;
@@ -378,6 +401,21 @@ public class BluetoothDeviceDemoActivity extends Activity {
 						tv_highbeta.setText("" + power.highBeta);
 						tv_lowgamma.setText("" + power.lowGamma);
 						tv_middlegamma.setText("" + power.middleGamma);
+
+						data.setDelta("" + power.delta);
+						data.setTheta("" + power.theta);
+						data.setLowAlpha("" + power.lowAlpha);
+						data.setHighAlpha("" + power.highAlpha);
+						data.setLowBeta("" + power.lowBeta);
+						data.setHighBeta("" + power.highBeta);
+						data.setLowGamma("" + power.lowGamma);
+						data.setMiddleGamma("" + power.middleGamma);
+
+						data.setMeditation("" +medi);
+						data.setAttention("" +atten);
+						medi="0";
+						atten="0";
+						brainData += data.getBrainTextString();
 					}
 					break;
 				case MindDataType.CODE_POOR_SIGNAL://
@@ -393,6 +431,7 @@ public class BluetoothDeviceDemoActivity extends Activity {
 				default:
 					break;
 			}
+
 			super.handleMessage(msg);
 		}
 	};
@@ -568,25 +607,70 @@ public class BluetoothDeviceDemoActivity extends Activity {
 		}
 	};
 
-	void dataSaveLog(String _log, String _fileName) {
+	void makeSaveData(String _brainData, String _fileName) {
+
 		/* SD CARD 하위에 LOG 폴더를 생성하기 위해 미리 dirPath에 생성 할 폴더명을 추가 */
 		String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/LOG/";
 		File file = new File(dirPath);
 		// 일치하는 폴더가 없으면 생성
-		if (!file.exists())
-			file.mkdirs();
+		if (!file.exists()) {
+            file.mkdirs();
+            showToast("새 폴더 생성 완료.",Toast.LENGTH_SHORT);
+        }
 
 		// txt 파일 생성
+		String textToFile = "시간		Medita Attent delta theta lowAl highAl lowBe highBe lowGam midGam\n";
+		textToFile += _brainData;
 		File savefile = new File(dirPath + "LOG_" + _fileName + ".txt");
 		try {
-			BufferedWriter bfw = new BufferedWriter(new FileWriter(dirPath + "LOG_" + _fileName + ".txt", true));
-			bfw.write(_log); bfw.write("\n");
-			bfw.flush();
-			bfw.close();
+            FileOutputStream fos = new FileOutputStream(savefile);
+            fos.write(textToFile.getBytes());
+            fos.close();
+			showToast("파일생성완료.",Toast.LENGTH_SHORT);
+            brainData = "";
 		} catch (IOException e)
 		{
 /* Exception */
 		}
+	}
+
+	void showTitleDialog(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        alert.setTitle("파일명 입력");
+        alert.setMessage("저장할 파일명을 입력해주세요~");
+
+
+        final EditText fileTitle = new EditText(this);
+        alert.setView(fileTitle);
+
+        alert.setPositiveButton("저장", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String fileName = fileTitle.getText().toString();
+                makeSaveData(brainData, fileName);
+
+            }
+        });
+
+
+        alert.setNegativeButton("취소",new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                showToast("저장취소, 데이터 삭제되었습니다.",Toast.LENGTH_SHORT);
+                brainData = "";
+
+            }
+        });
+
+        alert.show();
+
+    }
+
+    private String getNow(){
+		long time = System.currentTimeMillis();
+
+		SimpleDateFormat dayTime = new SimpleDateFormat("MM/dd hh:mm:ss");
+		String str = dayTime.format(new Date(time));
+		return str;
 	}
 
 }
